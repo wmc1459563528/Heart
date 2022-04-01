@@ -1,0 +1,61 @@
+
+body {
+    /* 背景 颜色为黑色 */
+    background-color: black;
+}
+
+.box {
+    /* 背景颜色为了定义爱心位置
+    margin定位到中间
+     animation: heard 1s linear infinite alternate
+     让爱心1秒来回缩放自动一次
+    */
+    /* background-color: aqua; */
+    height: 200px;
+    width: 200px;
+    margin: 100px auto;
+    animation: heard 1s linear infinite alternate;
+}
+/* @keyframes 关键帧 
+    在0%时为正常大小 
+    在100%时为1.2倍大小
+*/
+@keyframes heard {
+    0%{
+
+        transform: scale(1);
+        
+        }
+        
+    100%{
+        transform: scale(1.2);
+        
+        }
+}
+.left {
+    /* 爱心背景颜色为红色 宽高为200 向左浮动 
+    不然会每一个都是一整行 border-radius让爱心上边变圆角 
+    transform: rotate(-45deg) translateX(20px) 旋转-45度并沿着X轴位移20像素 
+    box-shadow: 2px 2px 20px 2px red; 阴影部分 为红色*/
+    background-color: pink;
+    height: 200px;
+    width: 100px;
+    float: left;
+    border-radius: 60px 60px 0px 0px ;
+    transform: rotate(-45deg) translateX(20px);
+    box-shadow: 3px 3px 20px 3px pink;
+}
+
+.right {
+      /* 爱心背景颜色为红色 宽高为200 向左浮动 
+    不然会每一个都是一整行 border-radius让爱心上边变圆角 
+    transform: rotate(-45deg) translateX(20px) 旋转-45度并沿着X轴位移20像素 
+    box-shadow: 2px 2px 20px 2px red; 阴影部分 为红色*/
+    background-color: pink;
+    height: 200px;
+    width: 100px;
+    float: left;
+    border-radius: 60px 60px 0 0 ;
+    transform: rotate(45deg) translateX(-20px);
+    box-shadow: 3px 3px 20px 3px pink;
+}
